@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szyfry", "Szyfry\Szyfry.csproj", "{7852B10D-1001-4CC6-87F6-EAC800D67B2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzyfryGUI", "SzyfryGUI\SzyfryGUI.csproj", "{01B79482-6AC5-43D4-A1A8-FCB63E710A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzyfryConsole", "SzyfryConsole\SzyfryConsole.csproj", "{07283448-25EF-4B87-9406-6102DED2264D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Gui", "enigma\Enigma.Gui\Enigma.Gui.csproj", "{AB8FC6F7-CD43-4F0A-B811-7B5153F83482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma.Core", "enigma\Enigma.Core\Enigma.Core.csproj", "{C08F3BDD-F655-4512-9FFE-BDD833D8A974}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BouncyCastle.Crypto", "BouncyCastle.Crypto\BouncyCastle.Crypto.csproj", "{B959189B-D6F8-4709-94D8-C66F46A2A6CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7852B10D-1001-4CC6-87F6-EAC800D67B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7852B10D-1001-4CC6-87F6-EAC800D67B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7852B10D-1001-4CC6-87F6-EAC800D67B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7852B10D-1001-4CC6-87F6-EAC800D67B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B79482-6AC5-43D4-A1A8-FCB63E710A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B79482-6AC5-43D4-A1A8-FCB63E710A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B79482-6AC5-43D4-A1A8-FCB63E710A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B79482-6AC5-43D4-A1A8-FCB63E710A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07283448-25EF-4B87-9406-6102DED2264D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07283448-25EF-4B87-9406-6102DED2264D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07283448-25EF-4B87-9406-6102DED2264D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07283448-25EF-4B87-9406-6102DED2264D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8FC6F7-CD43-4F0A-B811-7B5153F83482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8FC6F7-CD43-4F0A-B811-7B5153F83482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8FC6F7-CD43-4F0A-B811-7B5153F83482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8FC6F7-CD43-4F0A-B811-7B5153F83482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08F3BDD-F655-4512-9FFE-BDD833D8A974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08F3BDD-F655-4512-9FFE-BDD833D8A974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08F3BDD-F655-4512-9FFE-BDD833D8A974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08F3BDD-F655-4512-9FFE-BDD833D8A974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B959189B-D6F8-4709-94D8-C66F46A2A6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B959189B-D6F8-4709-94D8-C66F46A2A6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B959189B-D6F8-4709-94D8-C66F46A2A6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B959189B-D6F8-4709-94D8-C66F46A2A6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

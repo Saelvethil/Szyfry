@@ -1,0 +1,443 @@
+﻿<Window x:Class="SzyfryGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="MainWindow" Height="600" Width="1100"
+        Top="50" Left="50">
+    <DockPanel>
+        <Grid Width="350">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">RailFence</Label>
+                <Label Grid.Row="0" Grid.Column="1" Margin="2">Krok(np. 3)</Label>
+                <TextBox Grid.Row="0" Grid.Column="2"  Name="railStep" Margin="2">3</TextBox>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">ColTransposition</Label>
+                <Label Grid.Row="0" Grid.Column="1" Margin="2">Klucz(np. 3412)</Label>
+                <TextBox Grid.Row="0" Grid.Column="2"  Name="ColumnarKey" Margin="2">3412</TextBox>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">ColTransposition 2</Label>
+                <Label Grid.Row="0" Grid.Column="1" Margin="2">Klucz(np. BREAK)</Label>
+                <TextBox Grid.Row="0" Grid.Column="2" Name="ColumnarKey2" Margin="2">BREAK</TextBox>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="1,1,1,-2">Caesar</Label>
+                <Label Grid.Row="0" Grid.Column="1" Margin="2">Klucz0(np. 7)</Label>
+                <Label Grid.Row="1" Grid.Column="1" Margin="2">Klucz1(np. 3)</Label>
+                <TextBox Grid.Row="0" Grid.Column="2" Name="CaesarKey0" Margin="2">7</TextBox>
+                <TextBox Grid.Row="1" Grid.Column="3" Name="CaesarKey1" Margin="2">3</TextBox>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">Vigenere</Label>
+                <Label Grid.Row="0" Grid.Column="1" Margin="2">Klucz(np. BREAK)</Label>
+                <TextBox Grid.Row="0" Grid.Column="2"  Name="VigenereKey" Margin="2">BREAK</TextBox>
+            </Grid>
+            <Grid Grid.Row="5">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">Enigma</Label>
+                <Button Grid.Row="0" Grid.Column="1" Margin="2" Click="EnigmaButton_Click">Wyświetl/ukryj Enigmę</Button>
+            </Grid>
+            <Grid Grid.Row="6">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">3DES</Label>
+                <Button Grid.Row="0" Grid.Column="1" Margin="2" Click="Des3Button_Click">Wygeneruj klucz 3DES</Button>
+                <Label Grid.Row="1" Grid.Column="0" Margin="2">Klucz(24 znaki)</Label>
+                <TextBox Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" IsReadOnly="True" Name="DES3Key" Margin="2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+            </Grid>
+            <Grid Grid.Row="7">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">AES</Label>
+                <Button Grid.Row="0" Grid.Column="1" Margin="2" Click="AESButton_Click">Wygeneruj klucz AES</Button>
+                <Label Grid.Row="1" Grid.Column="0" Margin="2">Klucz(24 znaki)</Label>
+                <TextBox Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" IsReadOnly="True" Name="AESKey" Margin="2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+            </Grid>
+            <Grid Grid.Row="8">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF326C69" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF326C69" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="2">RSA</Label>
+                <Button Grid.Row="0" Grid.Column="1" Margin="2" Click="RSACreateKeyButton_Click">Wygeneruj klucze RSA</Button>
+                <Label Grid.Row="1" Grid.Column="0" Margin="2">Klucz publiczny</Label>
+                <TextBox Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" IsReadOnly="True" Name="RSAPublicKey" Margin="2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+                <Button Grid.Row="2" Grid.Column="0" Margin="2" Click="RSALoadPublicKeyButton_Click">Wczytaj klucz publiczny...</Button>
+                <Button Grid.Row="2" Grid.Column="1" Margin="2" Click="RSASavePublicKeyButton_Click">Zapisz klucz publiczny...</Button>
+                <Label Grid.Row="3" Grid.Column="0" Margin="2">Klucz prywatny</Label>
+                <TextBox Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" IsReadOnly="True" Name="RSAPrivateKey" Margin="2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+                <Button Grid.Row="4" Grid.Column="0" Margin="2" Click="RSALoadPrivateKeyButton_Click">Wczytaj klucz prywatny...</Button>
+                <Button Grid.Row="4" Grid.Column="1" Margin="2" Click="RSASavePrivateKeyButton_Click">Zapisz klucz prywatny...</Button>
+
+            </Grid>
+        </Grid>
+        <Grid Width="350">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF21A8E8" Offset="0"/>
+                    <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                    <GradientStop Color="#FF21A8E8" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Name="LoadEncryptFileButton" Margin="10,2" Click="LoadEncryptFileButton_Click">Wczytaj ustawienia...</Button>
+            <Button Grid.Row="0" Grid.Column="1" Name="SaveEncryptFileButton" Margin="10,2" Click="SaveEncryptFileButton_Click">Zapisz ustawienia...</Button>
+            <Slider Grid.ColumnSpan="2" Name="BlockSlider" TickPlacement="BottomRight" IsSnapToTickEnabled="True" Value="1" Minimum="1" Maximum="8" Grid.Row="1" Margin="10,10,19,2" ValueChanged="BlockSlider_ValueChanged"></Slider>
+            <TextBlock Grid.Row="1" Grid.Column="1" Margin="10"  Text="{Binding Value, ElementName=BlockSlider, StringFormat={}{0:0}}"
+               VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <StackPanel Name="ComboBoxesPanel" Grid.Row="3" Grid.RowSpan="1" Margin="10,2,5,2" VerticalAlignment="Center">
+                <ComboBox Name="BlockComboBox1" SelectedIndex="0" Margin="2" IsEditable="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="BlockComboBox2" SelectedIndex="0"  Margin="2" IsEditable="False" IsEnabled="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="BlockComboBox3" SelectedIndex="0"  Margin="2" IsEditable="False"  IsEnabled="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="BlockComboBox4" SelectedIndex="0"  Margin="2" IsEditable="False"  IsEnabled="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="BlockComboBox5" SelectedIndex="0"  Margin="2" IsEditable="False"  IsEnabled="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="BlockComboBox6" SelectedIndex="0"  Margin="2" IsEditable="False"  IsEnabled="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="BlockComboBox7" SelectedIndex="0"  Margin="2" IsEditable="False"  IsEnabled="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="BlockComboBox8" SelectedIndex="0"  Margin="2" IsEditable="False"  IsEnabled="False">
+                    <ComboBoxItem>RailFence</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition</ComboBoxItem>
+                    <ComboBoxItem>Columnar Transposition 2</ComboBoxItem>
+                    <ComboBoxItem>Caesar</ComboBoxItem>
+                    <ComboBoxItem>Vigenere</ComboBoxItem>
+                    <ComboBoxItem>Enigma</ComboBoxItem>
+                    <ComboBoxItem>3DES</ComboBoxItem>
+                    <ComboBoxItem>AES</ComboBoxItem>
+                    <ComboBoxItem>RSA</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <Slider Grid.Row="2" Grid.Column="1" Name="BlockShowSlider" TickPlacement="BottomRight" IsSnapToTickEnabled="True" Value="1" Minimum="1" Maximum="1" Margin="10,10,19,2" ValueChanged="BlockShowSlider_ValueChanged"></Slider>
+            <TextBlock Grid.Row="2" Grid.Column="1"  Margin="10"  Text="{Binding Value, ElementName=BlockShowSlider, StringFormat={}{0:0}}"
+               VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBox Name="BlockTextBox" Grid.Row="3" Grid.Column="1" Margin="10"  IsReadOnly="True" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"></TextBox>
+            <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFBBB5B5" Offset="0"/>
+                        <GradientStop Color="#FF979797" Offset="0.25"/>
+                        <GradientStop Color="#FF4B4B4B" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Name="GenerateSignature" Margin="5,5,5,2" Click="GenerateSignatureButton_Click">Wygeneruj podpis</Button>
+                <TextBox Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" IsReadOnly="True" Name="SignatureTextBox" Margin="5,5,5,2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+                <Button Grid.Row="1" Grid.Column="0" Name="SaveHash" Margin="5,5,5,2" Click="SaveSignatureFileButton_Click">Zapisz wygenerowany podpis</Button>
+                <Button Grid.Row="1" Grid.Column="1" Name="LoadHash" Margin="5,5,5,2" Click="LoadSignatureFileButton_Click">Wczytaj weryfikowany podpis</Button>
+                <Button Grid.Row="2" Grid.ColumnSpan="2" Name="VerifySignature" Margin="5" Click="VerifySignatureButton_Click">Zweryfikuj podpis</Button>
+            </Grid>
+            <Grid Grid.Row="5" Grid.ColumnSpan="2">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF21A8E8" Offset="0"/>
+                        <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                        <GradientStop Color="#FF21A8E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Name="GenerateDHKey" Margin="5,5,5,2" Click="GenerateDHKeyButton_Click">Wygeneruj klucz publiczny</Button>
+                <TextBox Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" IsReadOnly="True" Name="DHKeyTextBox" Margin="5,5,5,2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+                <Button Grid.Row="1" Grid.Column="0" Name="SaveDHKey" Margin="5,5,5,2" Click="SaveDHKeyFileButton_Click">Zapisz swój klucz</Button>
+                <!--<Button Grid.Row="1" Grid.Column="1" Name="LoadDHKey" Margin="5,5,5,2" Click="LoadDHKeyFileButton_Click">Wczytaj swój klucz</Button>-->
+                <Button Grid.Row="2" Grid.Column="0" Name="LoadForeignDHKey" Margin="5,5,5,2" Click="LoadForeignDHKeyFileButton_Click">Wczytaj obcy klucz</Button>
+                <TextBox Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" IsReadOnly="True" Name="ForeignDHKeyTextBox" Margin="5,5,5,2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+                <Button Grid.Row="3" Name="GenerateSymmetricDHKey" Margin="5" Click="GenerateSymmetricDHKeyButton_Click">Wygeneruj klucz symetryczny</Button>
+                <TextBox Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" IsReadOnly="True" Name="SymmetricDHKeyTextBox" Margin="5" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+            </Grid>
+        </Grid>
+
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2172E8" Offset="0"/>
+                    <GradientStop Color="#FF8BFFFA" Offset="0.5"/>
+                    <GradientStop Color="#FF2172E8" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Name="LoadMsgFileButton" Margin="5,5,5,2" Click="LoadMsgFileButton_Click">Wczytaj wiadomość z pliku...</Button>
+            <Button Grid.Row="0" Grid.Column="1" Name="SaveMsgFileButton" Margin="5,5,5,2" Click="SaveMsgFileButton_Click">Zapisz wiadomość do pliku...</Button>
+            <Button Grid.Row="1" Grid.Column="0" Name="BlockEncrypt" Margin="5,5,5,2" Click="BlockEncrypt_Click">Szyfruj blokowo</Button>
+            <Button Grid.Row="1" Grid.Column="1" Name="BlockDecrypt" Margin="5,5,5,2" Click="BlockDecrypt_Click">Odszyfruj blokowo</Button>
+            <TextBox Name="MessageTextBox" Grid.Row="2" Grid.ColumnSpan="2" Margin="5"  AcceptsReturn="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"></TextBox>
+            <Grid Grid.Row="3" Grid.ColumnSpan="2">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFBBB5B5" Offset="0"/>
+                        <GradientStop Color="#FF979797" Offset="0.25"/>
+                        <GradientStop Color="#FF4B4B4B" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.ColumnSpan="2" Name="GenerateHash" Margin="5,5,5,2" Click="GenerateHashButton_Click">Wygeneruj skrót</Button>
+                <TextBox Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" IsReadOnly="True" Name="HashTextBox" Margin="5,5,5,2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+                <Button Grid.Row="1" Grid.Column="0" Name="SaveSignature" Margin="5,5,5,2" Click="SaveHashFileButton_Click">Zapisz wygenerowany skrót</Button>
+                <Button Grid.Row="2" Grid.Column="0" Name="LoadSignature" Margin="5,5,5,2" Click="LoadHashFileButton_Click">Wczytaj porównywany skrót</Button>
+                <TextBox Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" IsReadOnly="True" Name="CompareHashTextBox" Margin="5,5,5,2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"></TextBox>
+                <Button Grid.Row="3" Grid.ColumnSpan="2" Name="CompareHash" Margin="5,5,5,2" Click="CompareHashButton_Click">Porównaj skrót</Button>
+            </Grid>
+        </Grid>
+    </DockPanel>
+
+</Window>
